@@ -1,3 +1,40 @@
+## Monday - Friday (15/7/19 - 19/7/19)
+- learnt how you can serve a react app as a static web-app without a webserver
+- configure nginx to serve different index.htmls on different ports 
+
+```
+# nginx.conf
+server {
+      listen 4001;
+      root /etc/nginx/shipper;
+      index index.html;
+      try_files $uri /index.html;
+  }
+
+  server {
+      listen 4002;
+      root /etc/nginx/ops;
+      index index.html;
+      try_files $uri /index.html;
+  }
+```
+
+- when exposing nginx ports, don't forget to expose the ports on docker as well
+
+```
+# docker-compose.yml
+  nginx:
+    image: nginx
+    volumes:
+      - ./env/local/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ../janio-shipper/build:/etc/nginx/shipper/:ro
+      - ../janio-ops/build:/etc/nginx/ops/:ro
+    ports:
+      - "80:80"
+      - "4001:4001"
+      - "4002:4002"
+```
+
 ## Monday - Friday (08/7/19 - 12/7/19)
 - learnt the basics/simple architecture of Docker & containers
 - prepare for migration of our services from Heroku to AWS:
