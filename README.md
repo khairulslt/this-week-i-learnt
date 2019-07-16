@@ -35,6 +35,10 @@ server {
       - "4002:4002"
 ```
 
+- learnt about `mime types` and how they can legitimately make your web app look like crap if you don't include it (especially in your `nginx.conf`)
+- `mime types` basically help to identify files on the internet, i.e a css file as a css file / a js file as a js file
+
+
 ## Monday - Friday (08/7/19 - 12/7/19)
 - learnt the basics/simple architecture of Docker & containers
 - prepare for migration of our services from Heroku to AWS:
