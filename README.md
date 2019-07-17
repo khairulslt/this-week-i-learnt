@@ -37,6 +37,9 @@ server {
 
 - learnt how to use `/etc/hosts` to map hostnames to IP addresses
 - learnt about `mime types` and how they can legitimately make your web app look like crap if you don't include it (especially in your `nginx.conf`)
+
+### MIME types
+- [Light Reading](https://www.cyberciti.biz/faq/how-to-override-content-type-with-nginx-web-server/)
 - `mime types` basically help to identify files on the internet, i.e a `css` file as a `css` file / a `js` file as a `js` file
 - based off the `mime type`, browser then determines how to process a URL.
 - make sure you include `mime type` in your `nginx.conf` so that `Nginx` will send the correct `mime type` in the response's `Content-Type` header
