@@ -44,6 +44,36 @@ server {
 - based off the `mime type`, browser then determines how to process a URL.
 - make sure you include `mime type` in your `nginx.conf` so that `Nginx` will send the correct `mime type` in the response's `Content-Type` header
 
+### Node/React/JS
+- learnt how command line scripts like `npm test` or `yarn dev` or `yarn start`
+- running the relevant command in terminal will trigger its value (see `scripts` below)
+- example `package.json`
+
+```
+  "scripts": {
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "localbuild": "REACT_APP_IS_LOCAL=true react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "yarn run build"
+  }
+```
+
+- in the example above, look at: `yarn localbuild`
+- by using that command, the bottom bit will run as True
+
+```
+const url = window.location.href;
+if (process.env.REACT_APP_IS_LOCAL) {
+  ROOT_URL = 'http://ops.janio.local/api';
+} else {
+```
+
+### Git
+- git diff displays the difference
+
 
 ## Monday - Friday (08/7/19 - 12/7/19)
 - learnt the basics/simple architecture of Docker & containers
