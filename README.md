@@ -38,6 +38,8 @@ server {
 - learnt how to use `/etc/hosts` to map hostnames to IP addresses
 - learnt about `mime types` and how they can legitimately make your web app look like crap if you don't include it (especially in your `nginx.conf`)
 - `mime types` basically help to identify files on the internet, i.e a `css` file as a `css` file / a `js` file as a `js` file
+- based off the `mime type`, browser then determines how to process a URL.
+- make sure you include `mime type` in your `nginx.conf` so that `Nginx` will send the correct `mime type` in the response's `Content-Type` header
 
 
 ## Monday - Friday (08/7/19 - 12/7/19)
@@ -48,7 +50,7 @@ server {
 - learnt how to get a docker containers internal IP (https://stackoverflow.com/questions/17157721/how-to-get-a-docker-containers-ip-address-from-the-host)
 - learnt that you can't access a docker container by internal IP - at least via the browser (https://github.com/docker/for-win/issues/221)
 - learnt how to SSH into a docker container (http://phase2.github.io/devtools/common-tasks/ssh-into-a-container/)
-- if in an `nginx` container, can do `apt-get update && apt-get install iputils-ping` then `ping` server
+- when troubleshooting from an `nginx` container and trying to ping your server, `ping` command won't exist... instead do `apt-get update && apt-get install iputils-ping` then you can `ping` server
 - try to use `nginx` to reverse proxy all requests @port80 to port8000(our backend APIs)
 - fail dramatically
 - kept getting `502 Connection Refused` errors when trying to connect to port80
