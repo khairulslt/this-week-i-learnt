@@ -76,8 +76,8 @@ if (process.env.REACT_APP_IS_LOCAL) {
 }
 ```
 
-- learnt how you can add environment variable settings into `docker-compose up` 
-- e.g `BUILD_ENV=local docker-compose up`
+- learnt the proper way of setting up environment variables 
+- e.g look at the command `BUILD_ENV=local docker-compose up`
 
 ```
 # docker-compose.yml
@@ -101,8 +101,15 @@ services:
       - "443:443"
 ```
 
+- in the example above, `BUILD_ENV=local` vs `BUILD_ENV=staging`
+- can then have different `nginx.conf` in `/env/local` & `/env/staging`
+- can then have different `server_name`
+- e.g `server_name api.staging.janio.asia;` | `server_name api.janio.local;`
+
+- learnt how to implement cache expiry, (useful so your webapp will update to latest copy)[https://www.imperva.com/learn/performance/cache-control/]
+
 ### Git
-- git diff displays the difference
+- `git diff` useful display the difference before merging/pulling/pushing
 
 
 ## Monday - Friday (08/7/19 - 12/7/19)
