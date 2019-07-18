@@ -106,7 +106,7 @@ services:
 - can then have different `server_name`
 - e.g `server_name api.staging.janio.asia;` | `server_name api.janio.local;`
 
-- learnt how to implement cache expiry, (useful so your webapp will update to latest copy)[https://www.imperva.com/learn/performance/cache-control/]
+- learnt how to implement cache expiry, [useful so your webapp will update to latest copy](https://www.imperva.com/learn/performance/cache-control/)
 
 ### Git
 - `git diff` useful display the difference before merging/pulling/pushing
