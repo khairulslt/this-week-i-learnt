@@ -44,8 +44,8 @@ server {
 - based off the `mime type`, browser then determines how to process a URL.
 - make sure you include `mime type` in your `nginx.conf` so that `Nginx` will send the correct `mime type` in the response's `Content-Type` header
 
-### Node/React/JS
-- learnt how command line scripts like `npm test` or `yarn dev` or `yarn start`
+### Docker/Node/React/JS On Environment Variables
+- learnt how to create command line scripts like `npm test` or `yarn dev` or `yarn start`
 - running the relevant command in terminal will trigger its value (see `scripts` below)
 - example `package.json`
 
@@ -65,10 +65,40 @@ server {
 - by using that command, the bottom bit will run as True
 
 ```
+# index.js 
+# when controlling api endpoints (e.g from a form)
 const url = window.location.href;
 if (process.env.REACT_APP_IS_LOCAL) {
+  # if local env, use this endpoint
   ROOT_URL = 'http://ops.janio.local/api';
 } else {
+  # if prod/staging env, use this endpoint
+}
+```
+
+- learnt how you can add environment variable settings into `docker-compose up` 
+- e.g `BUILD_ENV=local docker-compose up`
+
+```
+# docker-compose.yml
+
+version: "3"
+services:
+  janiobackend:
+    image: khairulslt/janioasia:backend
+    env_file:
+      - ./env/${BUILD_ENV}/variables.env
+    ports:
+      - "8000:8000"
+  nginx:
+    image: nginx
+    volumes:
+      - ./env/${BUILD_ENV}/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ../janio-shipper/build:/etc/nginx/shipper/:ro
+      - ../janio-ops/build:/etc/nginx/ops/:ro
+    ports:
+      - "80:80"
+      - "443:443"
 ```
 
 ### Git
