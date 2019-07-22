@@ -1,3 +1,11 @@
+## Monday - Friday (22/7/19 - 26/7/19)
+- learnt about [RabbitMQ / Celery / Django](https://simpleisbetterthancomplex.com/tutorial/2017/08/20/how-to-use-celery-with-django.html) integration
+
+### How Web Apps Work
+- Web Apps operate via a request/response cycle. When the user accesses a URL of your webapp, the web browser sends a request to your server. Django receives this request and responds accordingly (DB query / data processing etcetc). While this processing is happening, the user will have to wait. After the processing is done, the server (Django) sends its response back to the user (browser) who will finally see something.
+- Usually or ideally, this request/response cycle is very fast, otherwise the user will have to wait very long. Additionally, our web server can only serve a certain number of users at a time. So if this process is slow, it can limit the amount of pages your webapp can serve at a time.
+- For the most part, we work around this issue by optimizing DB queries, utilizing cache and so on. But in some cases, there's no other option and heavy work has to be done (report page / huge data export / image processing). This is where Celery comes in.
+
 ## Monday - Friday (15/7/19 - 19/7/19)
 - learnt how you can serve a react app as a static web-app without a webserver
 - configure nginx to serve different index.htmls on different ports 
@@ -109,7 +117,7 @@ services:
 - learnt how to implement cache expiry, [useful so your webapp will update to latest copy](https://www.imperva.com/learn/performance/cache-control/)
 
 ### Git
-- `git diff` useful display the difference before merging/pulling/pushing
+- `git diff` useful to display the difference before merging/pulling/pushing
 
 
 ## Monday - Friday (08/7/19 - 12/7/19)
