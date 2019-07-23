@@ -1,5 +1,6 @@
 ## Monday - Friday (22/7/19 - 26/7/19)
 - learnt about [RabbitMQ / Celery / Django](https://simpleisbetterthancomplex.com/tutorial/2017/08/20/how-to-use-celery-with-django.html) integration
+- learnt basic (PostgreSQL Commands](http://jazstudios.blogspot.com/2010/06/postgresql-login-commands.html)
 
 ### How Web Apps Work
 - Web Apps operate via a request/response cycle. When the user accesses a URL of your webapp, the web browser sends a request to your server. Django receives this request and responds accordingly (DB query / data processing etcetc). While this processing is happening, the user will have to wait. After the processing is done, the server (Django) sends its response back to the user (browser) who will finally see something.
