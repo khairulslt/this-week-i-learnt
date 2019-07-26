@@ -2,7 +2,7 @@
 - learnt about [RabbitMQ / Celery / Django](https://simpleisbetterthancomplex.com/tutorial/2017/08/20/how-to-use-celery-with-django.html) integration
 - learnt basic [PostgreSQL Commands](http://jazstudios.blogspot.com/2010/06/postgresql-login-commands.html)
 - learnt what a [Procfile](https://devcenter.heroku.com/articles/procfile) does (Heroku Stuff)
-- started a RabbitMQ image `docker run -d --name some-rabbit -p 5672:5672 -p 5673:5673 -p 15672:15672 rabbitmq:3-management`
+- started a RabbitMQ image `docker run -d --name some-rabbit -p 5672:5672 -p 5673:5673 -p 15672:15672 rabbitmq:3-management` see: [here](https://stackoverflow.com/questions/47290108/how-to-open-rabbitmq-in-browser-using-docker-container) & [here](https://hub.docker.com/_/rabbitmq)
 
 ### How Web Apps Work
 - Web Apps operate via a request/response cycle. When the user accesses a URL of your webapp, the web browser sends a request to your server. Django receives this request and responds accordingly (DB query / data processing etcetc). While this processing is happening, the user will have to wait. After the processing is done, the server (Django) sends its response back to the user (browser) who will finally see something.
