@@ -1,3 +1,8 @@
+## Monday - Friday (29/7/19 - 02/7/19)
+- [more about Docker](https://www.revsys.com/tidbits/brief-intro-docker-djangonauts/)
+- [on docker-compose](https://www.revsys.com/tidbits/celery-and-django-and-docker-oh-my/)
+- [django/celery/docker](https://github.com/chrisk314/django-celery-docker-example)
+
 ## Monday - Friday (22/7/19 - 26/7/19)
 - learnt about [RabbitMQ / Celery / Django](https://simpleisbetterthancomplex.com/tutorial/2017/08/20/how-to-use-celery-with-django.html) integration
 - learnt basic [PostgreSQL Commands](http://jazstudios.blogspot.com/2010/06/postgresql-login-commands.html)
