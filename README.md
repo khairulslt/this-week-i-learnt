@@ -2,6 +2,13 @@
 - [more about Docker](https://www.revsys.com/tidbits/brief-intro-docker-djangonauts/)
 - [on docker-compose](https://www.revsys.com/tidbits/celery-and-django-and-docker-oh-my/)
 - [django/celery/docker](https://github.com/chrisk314/django-celery-docker-example)
+- learnt how to use docker-compose to set up a network of containers rather than manually [linking](https://docs.docker.com/network/links/) them together
+- when in the same user-defined docker network, learnt how to use the container's [hostname](https://stackoverflow.com/questions/40563469/connecting-to-rabbitmq-docker-container-from-service-in-another-container) to connect with one another
+- learnt that every docker-compose build requires an [image](https://github.com/DeviaVir/zenbot/issues/1072) to build from (DUH!)
+- learnt about using [healthchecks](https://stackoverflow.com/questions/53031439/connecting-to-rabbitmq-container-with-docker-compose) in docker-compose
+- related: see [here](https://stackoverflow.com/questions/31746182/docker-compose-wait-for-container-x-before-starting-y/41854997#41854997)
+- learnt how to set rabbitmq users
+- learnt that setting rabbitmq users (if the instance is spun up by docker) requires a different approach where you need to use volumes to copy your config files over, see [here](https://stackoverflow.com/questions/30747469/how-to-add-initial-users-when-starting-a-rabbitmq-docker-container)
 
 ## Monday - Friday (22/7/19 - 26/7/19)
 - learnt about [RabbitMQ / Celery / Django](https://simpleisbetterthancomplex.com/tutorial/2017/08/20/how-to-use-celery-with-django.html) integration
